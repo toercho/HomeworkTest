@@ -1,0 +1,18 @@
+using System;
+
+namespace Beverage_Labels
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var name = Console.ReadLine();
+            var volume = double.Parse(Console.ReadLine());
+            var energy = double.Parse(Console.ReadLine());//per100ml
+            var sugar = double.Parse(Console.ReadLine());//per 100ml
+
+            Console.WriteLine($"{volume}ml {name}:");
+            Console.WriteLine($"{volume*energy/100}kcal, {sugar*volume/100}g sugars");
+        }
+    }
+}
